@@ -1,0 +1,24 @@
+form#done {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form#done h1 {
+    text-align: center;
+}
+
+form#done svg {
+    width: 12rem;
+    height: auto;
+    align-self: center;
+    color: var(--green-300);
+}
+
+form#done section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}

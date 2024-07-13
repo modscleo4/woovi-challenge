@@ -1,0 +1,128 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-100: hsl(0, 0%, 30%);
+  --gray-200: hsl(0, 0%, 50%);
+  --gray-300: hsl(0, 0%, 69%);
+  --gray-400: hsl(0, 0%, 90%);
+  --gray-500: hsl(0, 0%, 96%);
+  --gray-600: hsl(0, 0%, 100%);
+
+  --green-100: hsl(164, 97%, 5%);
+  --green-200: hsl(164, 97%, 25%);
+  --green-300: hsl(164, 97%, 43%);
+  --green-400: hsl(164, 97%, 63%);
+  --green-500: hsl(164, 97%, 83%);
+  --green-600: hsl(164, 97%, 93%);
+
+  --blue-100: hsl(215, 71%, 5%);
+  --blue-200: hsl(215, 71%, 15%);
+  --blue-300: hsl(215, 71%, 25%);
+  --blue-400: hsl(215, 71%, 45%);
+  --blue-500: hsl(215, 71%, 65%);
+  --blue-600: hsl(215, 71%, 85%);
+
+  --red-100: hsl(348, 98%, 9%);
+  --red-200: hsl(348, 98%, 29%);
+  --red-300: hsl(348, 98%, 49%);
+  --red-400: hsl(348, 98%, 69%);
+  --red-500: hsl(348, 98%, 89%);
+  --red-600: hsl(348, 98%, 95%);
+
+  --yellow-100: hsl(37, 100%, 9%);
+  --yellow-200: hsl(37, 100%, 29%);
+  --yellow-300: hsl(37, 100%, 51%);
+  --yellow-400: hsl(37, 100%, 71%);
+  --yellow-500: hsl(37, 100%, 91%);
+  --yellow-600: hsl(37, 100%, 95%);
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  background-color: var(--gray-600);
+  color: var(--gray-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+strong {
+  font-weight: 800;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--gray-400);
+  margin: 0;
+}
+
+.secondary {
+  color: var(--gray-300);
+}
+
+.success {
+  color: var(--green-300);
+}
+
+.info {
+  color: var(--blue-300);
+}
+
+.error {
+  color: var(--red-300);
+}
+
+.warning {
+  color: var(--yellow-300);
+}
+
+.sm {
+  font-size: 0.875rem;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details summary {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+details summary::marker,
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: ' ';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--gray-100);
+  --border-size: 3px;
+  clip-path: polygon(0% 75%, 50% calc(33% - var(--border-size) / 2), 100% 75%, calc(100% - var(--border-size) / 2) calc(75% + var(--border-size) / 2), 50% calc(33% + var(--border-size) / 2), calc(var(--border-size) / 2) calc(75% + var(--border-size) / 2));
+  transition: rotate 100ms;
+}
+
+details[open] summary::after {
+  rotate: 180deg;
+}

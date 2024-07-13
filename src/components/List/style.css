@@ -1,0 +1,8 @@
+ul.list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.list li:not(:first-child) {
+    border-top: 2px solid var(--gray-400, #ccc);
+}

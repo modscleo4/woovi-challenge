@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #B2B2B2;
+}
+
+footer img {
+    height: 1.125rem;
+    filter: grayscale(100%);
+}

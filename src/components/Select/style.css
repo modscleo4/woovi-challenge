@@ -1,0 +1,64 @@
+label.custom-select {
+    width: 100%;
+    border: 2px solid var(--gray-300);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    position: relative;
+}
+
+label.custom-select span {
+    width: max-content;
+    background: var(--gray-600);
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    transition: top 100ms, font-size 100ms;
+}
+
+label.custom-select:focus-within span,
+label.custom-select select:not(:placeholder-shown)+span {
+    top: -0.75rem;
+    font-size: 0.875rem;
+}
+
+label.custom-select select {
+    appearance: none;
+    border: none;
+    background: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem;
+}
+
+label.custom-select select:focus {
+    outline: none;
+}
+
+label.custom-select:focus-within {
+    border-color: var(--blue-300);
+}
+
+label.custom-select:has(select:invalid) {
+    border-color: var(--red-300);
+}
+
+label.custom-select:has(select:invalid) span {
+    color: var(--red-300);
+}
+
+label.custom-select::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--gray-100);
+    clip-path: polygon(50% 20%, 0 75%, 100% 75%);
+    transition: rotate 100ms;
+}
+
+label.custom-select.open::after {
+    rotate: 180deg;
+}

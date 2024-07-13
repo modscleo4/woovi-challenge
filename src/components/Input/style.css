@@ -1,0 +1,49 @@
+label.custom-input {
+    width: 100%;
+    border: 2px solid var(--gray-300);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    position: relative;
+}
+
+label.custom-input span {
+    width: max-content;
+    background: var(--gray-600);
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    transition: top 100ms, font-size 100ms;
+    cursor: text;
+}
+
+label.custom-input:focus-within span,
+label.custom-input input:not(:placeholder-shown)+span {
+    top: -0.75rem;
+    font-size: 0.875rem;
+    cursor: unset;
+}
+
+label.custom-input input {
+    appearance: none;
+    -moz-appearance: textfield;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem;
+}
+
+label.custom-input input:focus {
+    outline: none;
+}
+
+label.custom-input:focus-within {
+    border-color: var(--blue-300);
+}
+
+label.custom-input:has(input:invalid) {
+    border-color: var(--red-300);
+}
+
+label.custom-input:has(input:invalid) span {
+    color: var(--red-300);
+}
